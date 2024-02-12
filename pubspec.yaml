@@ -12,12 +12,14 @@ dependencies:
   flutter:
     sdk: flutter
 
+  ## Functional Packages
   shared_preferences: 2.2.2
   flutter_bloc: 8.1.3
   get_it: 7.6.7
   dartz: 0.10.1
   equatable: 2.0.5
 
+  ## Visual Packages
   cupertino_icons: 1.0.6
   google_fonts: 6.1.0
   shimmer_animation: 2.1.0+1
@@ -35,6 +37,11 @@ dev_dependencies:
     sdk: flutter
 
   flutter_lints: 3.0.1
+
+  ## Test Packages
+  mockito: 5.4.4
+  build_runner: 2.4.8
+  bloc_test: 9.1.5
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
