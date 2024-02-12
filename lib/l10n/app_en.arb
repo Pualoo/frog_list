@@ -1,0 +1,12 @@
+{
+  "language":"en-US",
+    "@language":{
+      "description":"The current Language"
+    },
+
+  "@_ERROR_STATES": {
+  },
+    "errorCacheFailure": "Cache Failure!",
+    "unexpectedFailure": "Unexpected error, please try again later ",
+    "failure":"FAILURE"
+}

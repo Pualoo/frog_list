@@ -1,0 +1,12 @@
+{
+  "language":"pt-BR",
+    "@language":{
+      "description":"A linguagem atual"
+    },
+
+  "@_ERROR_STATES": {
+  },
+    "errorCacheFailure": "Falha interna no armanezamento Cache!",
+    "unexpectedFailure": "Erro inesperado, tente novamente mais tarde ",
+    "failure":"FALHA"
+}
