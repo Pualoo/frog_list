@@ -31,15 +31,15 @@ class _ChecklistTileWidgetState extends State<ChecklistTileWidget> {
   @override
   Widget build(BuildContext context) {
     return GenericListTileWidget(
-        leading: _CheckBoxWidget(
-          changeCheckState: _changeCheckState,
-          isChecked: isChecked,
-        ),
-        title: _CheckBoxTextWidget(
-          isChecked: isChecked,
-          text: text,
-        ),
-        onTap: () => _changeCheckState(!isChecked),
+      leading: _CheckBoxWidget(
+        changeCheckState: _changeCheckState,
+        isChecked: isChecked,
+      ),
+      title: _CheckBoxTextWidget(
+        isChecked: isChecked,
+        text: text,
+      ),
+      onTap: () => _changeCheckState(!isChecked),
     );
   }
 }

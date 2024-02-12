@@ -1,6 +1,6 @@
 import 'package:frog_list/features/checklist/domain/entities/checklist_entity.dart';
 
-class ChecklistPropertiesModel extends ChecklistPropertiesEntity{
+class ChecklistPropertiesModel extends ChecklistPropertiesEntity {
   const ChecklistPropertiesModel({
     required super.text,
     required super.isChecked,

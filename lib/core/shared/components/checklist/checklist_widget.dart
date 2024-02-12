@@ -14,13 +14,18 @@ class ChecklistWidget extends StatefulWidget {
 class _ChecklistWidgetState extends State<ChecklistWidget> {
   @override
   Widget build(BuildContext context) {
-    return GenericColumnWidget(children: [
-      ...widget.checklistItems.map(
+    return GenericColumnWidget(
+      children: [
+        ...widget.checklistItems.map(
           (checkListItem) => ChecklistTileWidget(
-        checkListTileParams: checkListItem,
-      ),
-    ),
-      const ChecklistTileAddWidget(),
-      const SizedBox(height: 70,),],);
+            checkListTileParams: checkListItem,
+          ),
+        ),
+        const ChecklistTileAddWidget(),
+        const SizedBox(
+          height: 70,
+        ),
+      ],
+    );
   }
 }

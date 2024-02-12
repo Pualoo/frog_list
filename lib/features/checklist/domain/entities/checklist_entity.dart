@@ -11,7 +11,7 @@ class ChecklistPropertiesEntity extends Equatable {
 
   @override
   List<Object> get props => [
-    text,
-    isChecked,
-  ];
+        text,
+        isChecked,
+      ];
 }

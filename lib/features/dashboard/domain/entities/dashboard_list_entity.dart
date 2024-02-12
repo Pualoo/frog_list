@@ -12,7 +12,7 @@ class DashboardListEntity extends Equatable {
 
   @override
   List<Object> get props => [
-    name,
-    checklistPropertiesEntityList,
-  ];
+        name,
+        checklistPropertiesEntityList,
+      ];
 }

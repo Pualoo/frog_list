@@ -2,7 +2,7 @@ import 'package:frog_list/features/checklist/data/models/checklist_properties_mo
 import 'package:frog_list/features/checklist/domain/entities/checklist_entity.dart';
 import 'package:frog_list/features/dashboard/domain/entities/dashboard_list_entity.dart';
 
-class DashboardListModel extends DashboardListEntity{
+class DashboardListModel extends DashboardListEntity {
   const DashboardListModel({
     required super.name,
     required super.checklistPropertiesEntityList,
@@ -10,13 +10,17 @@ class DashboardListModel extends DashboardListEntity{
 
   factory DashboardListModel.fromJson(Map<String, dynamic> json) {
     final List<ChecklistPropertiesEntity> checklistPropertiesListEntity = [];
-    if(json['checklist_properties'] != null && json['checklist_properties'] is List) {
+    if (json['checklist_properties'] != null &&
+        json['checklist_properties'] is List) {
       for (var checklist in (json['checklist_properties_list'] as List)) {
-        checklistPropertiesListEntity.add(ChecklistPropertiesModel.fromJson(checklist),);
+        checklistPropertiesListEntity.add(
+          ChecklistPropertiesModel.fromJson(checklist),
+        );
       }
     }
 
-    return DashboardListModel(name: json['name'],
+    return DashboardListModel(
+      name: json['name'],
       checklistPropertiesEntityList: checklistPropertiesListEntity,
     );
   }

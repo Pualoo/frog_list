@@ -11,31 +11,27 @@ class DashboardRepositoryImpl implements DashboardRepository {
   DashboardRepositoryImpl({required this.localDataSource});
 
   @override
-  Future<Either<Failure, List<DashboardListEntity>>> addNewList(String name) async {
+  Future<Either<Failure, List<DashboardListEntity>>> addNewList(
+      String name) async {
     try {
-      final dashBoardList =
-          await localDataSource.addNewList(name);
+      final dashBoardList = await localDataSource.addNewList(name);
       return Right(dashBoardList);
-    }
-    on AlreadyExistException {
+    } on AlreadyExistException {
       return Left(AlreadyExistFailure());
-    }
-    on CacheException {
+    } on CacheException {
       return Left(CacheFailure());
     }
   }
 
   @override
-  Future<Either<Failure, List<DashboardListEntity>>> deleteList(String name) async {
+  Future<Either<Failure, List<DashboardListEntity>>> deleteList(
+      String name) async {
     try {
-      final dashBoardList =
-          await localDataSource.deleteList(name);
+      final dashBoardList = await localDataSource.deleteList(name);
       return Right(dashBoardList);
-    }
-    on NotFoundException {
+    } on NotFoundException {
       return Left(NotFoundFailure());
-    }
-    on CacheException {
+    } on CacheException {
       return Left(CacheFailure());
     }
   }

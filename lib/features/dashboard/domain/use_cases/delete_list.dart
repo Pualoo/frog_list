@@ -5,8 +5,7 @@ import 'package:frog_list/core/shared/use_cases/use_case.dart';
 import 'package:frog_list/features/dashboard/domain/entities/dashboard_list_entity.dart';
 import 'package:frog_list/features/dashboard/domain/repositories/dashboard_repository.dart';
 
-class DeleteList
-    extends UseCase<List<DashboardListEntity>, DeleteListParams> {
+class DeleteList extends UseCase<List<DashboardListEntity>, DeleteListParams> {
   final DashboardRepository dashboardRepository;
 
   DeleteList(this.dashboardRepository);

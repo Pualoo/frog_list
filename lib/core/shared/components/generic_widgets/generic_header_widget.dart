@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 
 class GenericHeaderWidget extends StatelessWidget {
-  const GenericHeaderWidget({super.key, this.title, this.trailing,});
+  const GenericHeaderWidget({
+    super.key,
+    this.title,
+    this.trailing,
+  });
   final Widget? title;
   final Widget? trailing;
 
@@ -18,27 +22,27 @@ class GenericHeaderWidget extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Builder(
-                builder: (context) {
-                  if(title != null){
-                    return title!;
-                  }
-                  return Container();
+              Builder(builder: (context) {
+                if (title != null) {
+                  return title!;
                 }
-              ),
-              Builder(
-                  builder: (context) {
-                    if(trailing != null){
-                      return trailing!;
-                    }
-                    return Container();
-                  }
-              ),
+                return Container();
+              }),
+              Builder(builder: (context) {
+                if (trailing != null) {
+                  return trailing!;
+                }
+                return Container();
+              }),
             ],
           ),
           const Padding(
             padding: EdgeInsets.only(top: 12.0),
-            child: Divider(color: Colors.grey, height: 0, thickness: 1,),
+            child: Divider(
+              color: Colors.grey,
+              height: 0,
+              thickness: 1,
+            ),
           ),
         ],
       ),

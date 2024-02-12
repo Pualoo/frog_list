@@ -15,15 +15,15 @@ abstract class DashboardLocalDataSource {
   ///
   /// Throws [CacheException] if no cached data is present.
   Future<List<DashboardListModel>> addNewList(
-      String name,
-      );
+    String name,
+  );
 
   /// Delete one item of [DashboardListModel] from the cache.
   ///
   /// Throws [CacheException] if no cached data is present.
   Future<List<DashboardListModel>> deleteList(
-      String name,
-      );
+    String name,
+  );
 }
 
 class DashboardLocalDataSourceImpl implements DashboardLocalDataSource {
@@ -32,8 +32,7 @@ class DashboardLocalDataSourceImpl implements DashboardLocalDataSource {
   DashboardLocalDataSourceImpl({required this.sharedPreferences});
 
   @override
-  Future<List<DashboardListModel>> addNewList(
-      String name) async {
+  Future<List<DashboardListModel>> addNewList(String name) async {
     final jsonString = sharedPreferences.getString(kDashboardList);
 
     List<DashboardListModel> dashboardList = [];
@@ -45,8 +44,8 @@ class DashboardLocalDataSourceImpl implements DashboardLocalDataSource {
           .toList();
     }
 
-    dashboardList
-        .add(DashboardListModel(name: name, checklistPropertiesEntityList: const []));
+    dashboardList.add(DashboardListModel(
+        name: name, checklistPropertiesEntityList: const []));
 
     final cacheResponse = await sharedPreferences.setString(kDashboardList,
         jsonEncode(dashboardList.map((contact) => contact.toJson()).toList()));
@@ -74,12 +73,12 @@ class DashboardLocalDataSourceImpl implements DashboardLocalDataSource {
     DashboardListModel? deleteThisList;
 
     for (var list in dashboardList) {
-      if(list.name == name){
+      if (list.name == name) {
         deleteThisList = list;
       }
     }
 
-    if(deleteThisList == null){
+    if (deleteThisList == null) {
       return throw CacheException();
     }
 

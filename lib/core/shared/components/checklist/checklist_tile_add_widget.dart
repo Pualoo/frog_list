@@ -16,7 +16,13 @@ class ChecklistTileAddWidget extends StatelessWidget {
         ),
         border: Border.all(width: 1, color: Colors.grey),
       ),
-      child: const Center(child: Icon(Icons.add_rounded, color: Colors.white, size: 32,),),
+      child: const Center(
+        child: Icon(
+          Icons.add_rounded,
+          color: Colors.white,
+          size: 32,
+        ),
+      ),
     );
   }
 }

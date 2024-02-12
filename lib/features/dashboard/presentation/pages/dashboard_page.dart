@@ -21,11 +21,11 @@ class _DashboardPageState extends State<DashboardPage> {
       text: "Pimenta rosa em grãos",
     ),
     CheckListTileParams(
-      text: "Mel puro de abelhas, proveniente de áreas de preservação ambiental na floresta amazônica brasileira, colhido por comunidades indígenas.",
+      text:
+          "Mel puro de abelhas, proveniente de áreas de preservação ambiental na floresta amazônica brasileira, colhido por comunidades indígenas.",
     ),
     CheckListTileParams(
-      text:
-          "Azeitonas Kalamata premium em azeite de oliva extra virgem",
+      text: "Azeitonas Kalamata premium em azeite de oliva extra virgem",
     ),
     CheckListTileParams(
       text: "Chocolate amargo 85% cacau orgânico",

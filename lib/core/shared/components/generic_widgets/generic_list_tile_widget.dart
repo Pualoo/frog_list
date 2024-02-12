@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class GenericListTileWidget extends StatelessWidget {
-  const GenericListTileWidget({super.key, this.leading, this.title, this.onTap});
+  const GenericListTileWidget(
+      {super.key, this.leading, this.title, this.onTap});
   final Widget? leading;
   final Widget? title;
   final Function()? onTap;
